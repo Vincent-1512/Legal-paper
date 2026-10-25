@@ -1,0 +1,19 @@
+{
+  "dataset_repo": "custom-local-files",
+  "dataset_revision": "custom-local-files",
+  "metrics": {
+    "loss_per_sentence": 0.9991940366407618,
+    "bio_accuracy": 0.9925292263233942,
+    "bio_macro_f1": 0.9770576710579921,
+    "entity_strict_precision_micro": 0.9854988117755469,
+    "entity_strict_recall_micro": 0.9686799828383468,
+    "entity_strict_micro_f1": 0.9770170208673912,
+    "entity_strict_macro_f1": 0.9784561122491422
+  },
+  "dataset": {
+    "truncated_sentences": 0,
+    "discarded_words": 0,
+    "sha256": "1fe8b2992b00bec2457d96c20831421e7a6b9fe5b3b62320f9d0efd1217bde2a",
+    "limit": null
+  }
+}

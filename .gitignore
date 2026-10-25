@@ -1,0 +1,9 @@
+# Large model weights and bundled result archives are kept outside ordinary Git.
+*.pt
+*.bin
+*.safetensors
+*.pth
+*-results.zip
+.DS_Store
+__pycache__/
+.ipynb_checkpoints/
