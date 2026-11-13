@@ -1,0 +1,3 @@
+[2026-11-13 13:04:22] [INFO] Stage 1 seed=42, model=vinai/phobert-base, effective_batch=64, micro=64, accum=1, device=cuda
+[2026-11-13 13:06:25] [INFO] [STAGE 1 - Epoch 01/15] Train Loss: 3.4215 | Dev Loss: 2.7785 | Time: 0:01:29
+[2026-11-13 13:07:55] [INFO] [STAGE 1 - Epoch 02/15] Train Loss: 2.9683 | Dev Loss: 2.7542 | Time: 0:01:29

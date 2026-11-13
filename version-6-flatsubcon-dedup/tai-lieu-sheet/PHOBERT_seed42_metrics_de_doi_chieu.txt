@@ -1,0 +1,62 @@
+KẾT QUẢ FLAT SUPCON + LINEAR PROBE | PhoBERT-base (vinai/phobert-base) | SEED 42
+Dataset: levandai1704/PAP_NER_dedup_70_15_15 (test 5162 câu, 117462 token, 6336 thực thể gold)
+Pipeline: Stage 1 SupCon thuần (không alpha, không lambda) -> Stage 2 đóng băng encoder + Linear(768,11), không CRF
+
+=== BẢNG 1 (mức token, BIO) ===
+Accuracy không tính O (%): 94.5
+BIO Accuracy (%): 98.83
+BIO Macro Recall (%): 95.07
+BIO Macro-F1 (%): 94.86
+BIO Weighted Precision (%): 98.83
+BIO Weighted Recall (%): 98.83
+BIO Weighted-F1 (%): 98.83
+
+=== BẢNG 2 (mức thực thể, Strict, nervaluate 1.2.1) ===
+CQ - P (%): 91.46
+CQ - R (%): 94.98
+VBPL - P (%): 78.96
+VBPL - R (%): 91.74
+VBPL - F1 (%): 84.87
+NG - P (%): 99.67
+NG - R (%): 99.67
+NG - F1 (%): 99.67
+SL - P (%): 95.54
+SL - R (%): 96.98
+SL - F1 (%): 96.26
+Overall - P (%): 87.37
+Overall - R (%): 92.83
+Overall - F1 (%): 90.02
+
+=== Entity Strict theo từng loại (Micro + 5 loại) ===
+Tag | P | R | F1
+Micro | 87.37 | 92.83 | 90.02
+CQ | 91.46 | 94.98 | 93.19
+ĐT | 79.45 | 87.10 | 83.10
+VBPL | 78.96 | 91.74 | 84.87
+NG | 99.67 | 99.67 | 99.67
+SL | 95.54 | 96.98 | 96.26
+
+=== CLASSIFICATION REPORT MỨC TOKEN (sklearn) ===
+Classification report (BIO token level):
+              precision    recall  f1-score   support
+
+           O     0.9940    0.9931    0.9936    105726
+        B-CQ     0.9646    0.9683    0.9664      2052
+        I-CQ     0.8734    0.8734    0.8734       608
+        B-ĐT     0.9266    0.9373    0.9319      2264
+        I-ĐT     0.8208    0.8078    0.8142      1389
+      B-VBPL     0.9302    0.9444    0.9372       593
+      I-VBPL     0.9364    0.9753    0.9554      1946
+        B-NG     0.9992    0.9976    0.9984      1228
+        I-NG     0.9992    0.9976    0.9984      1227
+        B-SL     0.9898    0.9799    0.9848       199
+        I-SL     0.9784    0.9826    0.9805       230
+
+    accuracy                         0.9883    117462
+   macro avg     0.9466    0.9507    0.9486    117462
+weighted avg     0.9883    0.9883    0.9883    117462
+
+=== LƯU Ý KHI ĐỐI CHIẾU ===
+Trong log (seed_process.log) có dòng 'Test Strict P=0.4369 R=0.4642 F1=0.4501' và đầu test_report.txt ghi '12672 gold phrases'.
+Đó là kết quả của bộ đánh giá CoNLL cũ của repo gốc (nó đếm gấp đôi số thực thể gold: 12672 so với 6336 thật), KHÔNG phải số đưa vào bảng.
+Số dùng trong Bảng 2 là nervaluate Strict: Overall P=87.37, R=92.83, F1=90.02 (6336 thực thể gold).

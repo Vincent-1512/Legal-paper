@@ -1,0 +1,27 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PyTorch checkpoints and cached files
+outputs/
+*.pt
+*.pth
+*.bin
+*.cached
+
+# Logs and Tensorboard
+logs/
+runs/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual Environment
+venv/
+env/
+.env
+
+# OS specific
+.DS_Store
+Thumbs.db

@@ -1,0 +1,2 @@
+﻿Phiên bản,Model,Accuracy không tính O (%),BIO Accuracy (%),BIO Macro Recall (%),BIO Macro-F1 (%),BIO Weighted Precision (%),BIO Weighted Recall (%),BIO Weighted-F1 (%),Ghi chú
+phobert_base,vinai/phobert-base,93.89,98.84,94.45,94.77,98.83,98.84,98.83,Seed 43

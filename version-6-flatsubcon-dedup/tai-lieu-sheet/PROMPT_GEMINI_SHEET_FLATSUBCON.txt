@@ -1,0 +1,98 @@
+Bạn đang làm việc trên Google Sheet kết quả baseline NER của mình (4 mô hình: XLM-R, PhoBERT-base, ELECTRA, BamiBERT). Hãy THÊM dữ liệu cho một phiên bản mới tên "Flat SupCon + Linear Probe" (Flat SupCon + Linear Probe: SupCon phẳng không alpha, không lambda, encoder đóng băng ở Stage 2, không CRF) vào 3 chỗ: Bảng 1 (BIO-level), Bảng 2 (entity-level Strict) và tab "Cấu hình". Không sửa hay xóa dữ liệu của các phiên bản cũ.
+
+QUY TẮC CHUNG
+- Đọc trước khi ghi: xem sheet có những tab nào, các bảng nằm ở đâu, phiên bản cũ được đặt tên và sắp xếp ra sao (cột Phiên bản, Model, Ghi chú), rồi làm theo đúng cách đó.
+- Nếu chỗ nào chưa rõ thì hỏi lại mình, đừng đoán.
+- Mọi giá trị trong Bảng 1 và Bảng 2 là phần trăm (%), 2 chữ số thập phân, giữ định dạng giống các dòng cũ.
+- Chỉ PhoBERT-base đã có kết quả. XLM-R, ELECTRA, BamiBERT: chừa sẵn dòng (cùng cấu trúc 5 seed + Mean ± Std), để trống, ghi chú "chưa chạy".
+
+=====================================================
+PHẦN 1. BẢNG 1 (BIO-level)
+=====================================================
+Cột (giữ đúng thứ tự):
+Phiên bản | Model | Accuracy không tính O | BIO Accuracy | BIO Macro Recall | BIO Macro-F1 | BIO Weighted Precision | BIO Weighted Recall | BIO Weighted-F1 | Ghi chú
+
+Mô hình vinai/phobert-base, Phiên bản = "Flat SupCon + Linear Probe", cột Ghi chú = tên seed:
+Seed 42: 94.5 | 98.83 | 95.07 | 94.86 | 98.83 | 98.83 | 98.83
+Seed 43: 93.89 | 98.84 | 94.45 | 94.77 | 98.83 | 98.84 | 98.83
+Seed 44: 93.85 | 98.83 | 94.76 | 94.86 | 98.82 | 98.83 | 98.82
+Seed 45: 93.69 | 98.83 | 94.52 | 94.8 | 98.82 | 98.83 | 98.82
+Seed 46: 93.42 | 98.71 | 94.46 | 94.2 | 98.71 | 98.71 | 98.7
+Mean ± Std: 93.87 ± 0.40 | 98.81 ± 0.05 | 94.65 ± 0.27 | 94.70 ± 0.28 | 98.80 ± 0.05 | 98.81 ± 0.05 | 98.80 ± 0.06
+
+=====================================================
+PHẦN 2. BẢNG 2 (entity-level, Strict)
+=====================================================
+Cột (giữ đúng thứ tự):
+Phiên bản | Model | CQ P | CQ R | VBPL P | VBPL R | VBPL F1 | NG P | NG R | NG F1 | SL P | SL R | SL F1 | Overall P | Overall R | Overall F1 | Ghi chú
+
+Mô hình vinai/phobert-base (thứ tự giá trị: CQ P, CQ R, VBPL P, VBPL R, VBPL F1, NG P, NG R, NG F1, SL P, SL R, SL F1, Overall P, Overall R, Overall F1):
+Seed 42: 91.46 | 94.98 | 78.96 | 91.74 | 84.87 | 99.67 | 99.67 | 99.67 | 95.54 | 96.98 | 96.26 | 87.37 | 92.83 | 90.02
+Seed 43: 91.08 | 94.01 | 79.8 | 92.58 | 85.71 | 99.76 | 99.76 | 99.76 | 94.12 | 96.48 | 95.29 | 87.54 | 92.49 | 89.95
+Seed 44: 91.79 | 95.91 | 78.74 | 92.41 | 85.03 | 99.76 | 99.59 | 99.67 | 96.04 | 97.49 | 96.76 | 87.92 | 92.36 | 90.09
+Seed 45: 92.51 | 93.96 | 77.22 | 92.58 | 84.2 | 99.67 | 99.59 | 99.63 | 94.15 | 96.98 | 95.54 | 87.41 | 92.01 | 89.65
+Seed 46: 91.05 | 95.18 | 73.66 | 92.92 | 82.18 | 99.51 | 99.51 | 99.51 | 96.04 | 97.49 | 96.76 | 86.76 | 92.08 | 89.34
+Mean ± Std: 91.58 ± 0.60 | 94.81 ± 0.83 | 77.68 ± 2.43 | 92.45 ± 0.44 | 84.40 ± 1.35 | 99.67 ± 0.10 | 99.62 ± 0.09 | 99.65 ± 0.09 | 95.18 ± 0.97 | 97.08 ± 0.42 | 96.12 ± 0.68 | 87.40 ± 0.42 | 92.35 ± 0.33 | 89.81 ± 0.31
+
+=====================================================
+PHẦN 3. TAB "CẤU HÌNH"
+=====================================================
+Đọc các mục cấu hình mà tab đang có và chỉ điền vào các mục đó, theo đúng cách tab sắp xếp các phiên bản cũ (cột hoặc dòng). Mục nào phiên bản mới không có thì ghi "N/A". Mục nào phiên bản mới cần mà tab chưa có thì liệt kê ra cho mình quyết định, đừng tự thêm.
+
+Chung:
+- Phương pháp: Flat SupCon (SupCon phẳng) + Linear Probe, train 2 giai đoạn
+- Alpha: N/A (không có)
+- Lambda: N/A (không có, hai loss không cộng chung)
+- CRF: Không (đầu phân loại Linear 768 -> 11 nhãn)
+- Dataset: levandai1704/PAP_NER_dedup_70_15_15, revision e4af303d22f878e5827c94861f50f747a6b3ed45
+- Số câu train/dev/test: 24089 / 5162 / 5162
+- Seeds: 42, 43, 44, 45, 46 (mỗi seed chạy lại cả Stage 1 và Stage 2), báo cáo mean ± std
+- max_seq_length: 256
+- fp16: bật
+- GPU: NVIDIA RTX 3090; PyTorch 2.5.1+cu121; transformers 4.48.3
+
+Stage 1 (SupCon thuần, fine-tune encoder):
+- Loss: TokenSupConLoss, temperature 0.07, feature chuẩn hóa, độ tương đồng cosine
+- Batch size: 64
+- Learning rate encoder: 2e-5
+- Learning rate head (projection): 5e-4
+- Projection dim: 128
+- Warmup: 0.1
+- Weight decay: 0.01
+- Gradient clip: 1.0
+- Epoch tối đa: 15
+- Early stop: patience 5, theo dev SupCon loss (chọn encoder có dev loss thấp nhất)
+
+Stage 2 (Linear probe):
+- Encoder: đóng băng (freeze_backbone = true), dùng encoder tốt nhất từ Stage 1
+- Đầu phân loại: Linear(768, 11)
+- Loss: CrossEntropy, giải mã argmax
+- Optimizer: Adam, learning rate 1e-3
+- Batch size: 64
+- Epoch tối đa: 20
+- Early stop: patience 5, theo dõi dev Strict F1 (test dùng checkpoint tốt nhất)
+
+Số epoch thực tế của PhoBERT-base (nếu tab có mục này):
+Seed 42: Stage 1 chạy 9 epoch (best 4); Stage 2 chạy 20 epoch (best 19)
+Seed 43: Stage 1 chạy 10 epoch (best 5); Stage 2 chạy 20 epoch (best 20)
+Seed 44: Stage 1 chạy 10 epoch (best 5); Stage 2 chạy 20 epoch (best 18)
+Seed 45: Stage 1 chạy 11 epoch (best 6); Stage 2 chạy 20 epoch (best 20)
+Seed 46: Stage 1 chạy 8 epoch (best 3); Stage 2 chạy 20 epoch (best 20)
+Thời gian mỗi seed khoảng 26 đến 30 phút.
+
+Cột Model theo từng mô hình (cấu hình giống hệt, chỉ khác tên model):
+- XLM-R: FacebookAI/xlm-roberta-base
+- PhoBERT-base: vinai/phobert-base
+- ELECTRA: NlpHUST/electra-base-vn
+- BamiBERT: Qualcomm-AI-Research/BamiBERT
+
+Ghi chú để đưa vào chú thích nếu tab có chỗ:
+- Hàm SupCon có một thay đổi nhỏ so với repo gốc: tắt autocast khi tính ma trận tương đồng để tránh tràn fp16, công thức không đổi.
+- Chạy fp16 trên CUDA nên các seed không giống nhau từng bit, vì vậy báo cáo mean ± std.
+
+=====================================================
+KIỂM TRA SAU KHI GHI
+=====================================================
+1. Đếm số dòng đã thêm: mỗi bảng 6 dòng cho PhoBERT (5 seed + Mean ± Std), cộng các dòng chừa trống của 3 mô hình còn lại.
+2. Đối chiếu từng số với dữ liệu trên, ví dụ Overall F1 Mean ± Std phải là 89.81 ± 0.31, Bảng 1 Macro-F1 Mean ± Std phải là 94.70 ± 0.28.
+3. Báo cho mình mọi ô bạn phải đoán, mọi ô khác biệt và mọi mục cấu hình thiếu.

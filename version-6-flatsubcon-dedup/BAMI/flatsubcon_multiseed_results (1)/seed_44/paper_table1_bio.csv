@@ -1,0 +1,2 @@
+﻿Phiên bản,Model,Accuracy không tính O (%),BIO Accuracy (%),BIO Macro Recall (%),BIO Macro-F1 (%),BIO Weighted Precision (%),BIO Weighted Recall (%),BIO Weighted-F1 (%),Ghi chú
+bamibert,Qualcomm-AI-Research/BamiBERT,91.4,98.45,92.72,93.24,98.43,98.45,98.43,Seed 44

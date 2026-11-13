@@ -1,0 +1,41 @@
+{
+  "seed": 45,
+  "model_choice": "phobert_base",
+  "model": {
+    "model_name_or_path": "vinai/phobert-base",
+    "use_fast_tokenizer": false
+  },
+  "dataset_repo": "levandai1704/PAP_NER_dedup_70_15_15",
+  "dataset_revision": "e4af303d22f878e5827c94861f50f747a6b3ed45",
+  "dataset_dir": "/workspace/flatsubcon_multiseed_vast_phobert_base/project/Dataset",
+  "seed_dir": "/workspace/flatsubcon_multiseed_vast_phobert_base/runs/seed_45",
+  "max_micro_batch_size": 64,
+  "strict_determinism": false,
+  "training": {
+    "stage1": {
+      "batch_size": 64,
+      "learning_rate": 2e-05,
+      "head_learning_rate": 0.0005,
+      "supcon_temp": 0.07,
+      "projection_dim": 128,
+      "epochs": 15,
+      "early_stop": 5,
+      "fp16": true,
+      "warmup_proportion": 0.1,
+      "weight_decay": 0.01,
+      "max_grad_norm": 1.0,
+      "max_seq_length": 256,
+      "num_workers": 2
+    },
+    "stage2": {
+      "batch_size": 64,
+      "classifier_learning_rate": 0.001,
+      "epochs": 20,
+      "early_stop": 5,
+      "fp16": true,
+      "freeze_backbone": true,
+      "max_seq_length": 256,
+      "num_workers": 2
+    }
+  }
+}

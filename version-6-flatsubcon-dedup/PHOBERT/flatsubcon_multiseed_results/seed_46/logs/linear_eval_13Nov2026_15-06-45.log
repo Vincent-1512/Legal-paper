@@ -1,0 +1,60 @@
+[2026-11-13 15:06:47] [INFO] Stage 1 seed=46, model=vinai/phobert-base, effective_batch=64, micro=64, accum=1, device=cuda
+[2026-11-13 15:08:26] [INFO] [STAGE 1 - Epoch 01/15] Train Loss: 3.4247 | Dev Loss: 2.7814 | Time: 0:01:30
+[2026-11-13 15:09:57] [INFO] [STAGE 1 - Epoch 02/15] Train Loss: 2.9688 | Dev Loss: 2.7495 | Time: 0:01:30
+[2026-11-13 15:11:28] [INFO] [STAGE 1 - Epoch 03/15] Train Loss: 2.9340 | Dev Loss: 2.7454 | Time: 0:01:30
+[2026-11-13 15:12:59] [INFO] [STAGE 1 - Epoch 04/15] Train Loss: 2.9218 | Dev Loss: 2.7470 | Time: 0:01:30
+[2026-11-13 15:14:30] [INFO] [STAGE 1 - Epoch 05/15] Train Loss: 2.9169 | Dev Loss: 2.7502 | Time: 0:01:30
+[2026-11-13 15:16:00] [INFO] [STAGE 1 - Epoch 06/15] Train Loss: 2.9139 | Dev Loss: 2.7489 | Time: 0:01:30
+[2026-11-13 15:17:30] [INFO] [STAGE 1 - Epoch 07/15] Train Loss: 2.9118 | Dev Loss: 2.7487 | Time: 0:01:30
+[2026-11-13 15:19:01] [INFO] [STAGE 1 - Epoch 08/15] Train Loss: 2.9079 | Dev Loss: 2.7489 | Time: 0:01:30
+[2026-11-13 15:19:01] [INFO] Stage 1 early stopping at epoch 8.
+[2026-11-13 15:19:01] [INFO] Stage 2 seed=46, model=vinai/phobert-base, effective_batch=64, micro=64, accum=1, device=cuda
+[2026-11-13 15:19:50] [INFO] [STAGE 2 - Epoch 01/20] Train Loss: 0.1918 | Dev Strict P: 0.3871 | R: 0.4132 | F1: 0.3997 | Time: 0:00:39
+[2026-11-13 15:20:30] [INFO] [STAGE 2 - Epoch 02/20] Train Loss: 0.0656 | Dev Strict P: 0.3963 | R: 0.4319 | F1: 0.4133 | Time: 0:00:39
+[2026-11-13 15:21:10] [INFO] [STAGE 2 - Epoch 03/20] Train Loss: 0.0564 | Dev Strict P: 0.4039 | R: 0.4406 | F1: 0.4215 | Time: 0:00:39
+[2026-11-13 15:21:50] [INFO] [STAGE 2 - Epoch 04/20] Train Loss: 0.0514 | Dev Strict P: 0.4143 | R: 0.4455 | F1: 0.4293 | Time: 0:00:39
+[2026-11-13 15:22:31] [INFO] [STAGE 2 - Epoch 05/20] Train Loss: 0.0479 | Dev Strict P: 0.4183 | R: 0.4443 | F1: 0.4309 | Time: 0:00:39
+[2026-11-13 15:23:11] [INFO] [STAGE 2 - Epoch 06/20] Train Loss: 0.0456 | Dev Strict P: 0.4215 | R: 0.4465 | F1: 0.4336 | Time: 0:00:39
+[2026-11-13 15:23:51] [INFO] [STAGE 2 - Epoch 07/20] Train Loss: 0.0440 | Dev Strict P: 0.4227 | R: 0.4539 | F1: 0.4377 | Time: 0:00:39
+[2026-11-13 15:24:32] [INFO] [STAGE 2 - Epoch 08/20] Train Loss: 0.0424 | Dev Strict P: 0.4259 | R: 0.4483 | F1: 0.4368 | Time: 0:00:39
+[2026-11-13 15:25:11] [INFO] [STAGE 2 - Epoch 09/20] Train Loss: 0.0414 | Dev Strict P: 0.4283 | R: 0.4525 | F1: 0.4401 | Time: 0:00:39
+[2026-11-13 15:25:52] [INFO] [STAGE 2 - Epoch 10/20] Train Loss: 0.0404 | Dev Strict P: 0.4284 | R: 0.4541 | F1: 0.4409 | Time: 0:00:40
+[2026-11-13 15:26:32] [INFO] [STAGE 2 - Epoch 11/20] Train Loss: 0.0394 | Dev Strict P: 0.4324 | R: 0.4533 | F1: 0.4426 | Time: 0:00:39
+[2026-11-13 15:27:12] [INFO] [STAGE 2 - Epoch 12/20] Train Loss: 0.0387 | Dev Strict P: 0.4294 | R: 0.4592 | F1: 0.4438 | Time: 0:00:39
+[2026-11-13 15:27:53] [INFO] [STAGE 2 - Epoch 13/20] Train Loss: 0.0382 | Dev Strict P: 0.4357 | R: 0.4526 | F1: 0.4440 | Time: 0:00:39
+[2026-11-13 15:28:33] [INFO] [STAGE 2 - Epoch 14/20] Train Loss: 0.0376 | Dev Strict P: 0.4356 | R: 0.4566 | F1: 0.4459 | Time: 0:00:39
+[2026-11-13 15:29:13] [INFO] [STAGE 2 - Epoch 15/20] Train Loss: 0.0373 | Dev Strict P: 0.4332 | R: 0.4567 | F1: 0.4447 | Time: 0:00:39
+[2026-11-13 15:29:53] [INFO] [STAGE 2 - Epoch 16/20] Train Loss: 0.0369 | Dev Strict P: 0.4390 | R: 0.4570 | F1: 0.4478 | Time: 0:00:39
+[2026-11-13 15:30:33] [INFO] [STAGE 2 - Epoch 17/20] Train Loss: 0.0363 | Dev Strict P: 0.4362 | R: 0.4603 | F1: 0.4480 | Time: 0:00:39
+[2026-11-13 15:31:14] [INFO] [STAGE 2 - Epoch 18/20] Train Loss: 0.0360 | Dev Strict P: 0.4373 | R: 0.4522 | F1: 0.4446 | Time: 0:00:39
+[2026-11-13 15:31:53] [INFO] [STAGE 2 - Epoch 19/20] Train Loss: 0.0357 | Dev Strict P: 0.4340 | R: 0.4612 | F1: 0.4472 | Time: 0:00:39
+[2026-11-13 15:32:33] [INFO] [STAGE 2 - Epoch 20/20] Train Loss: 0.0356 | Dev Strict P: 0.4387 | R: 0.4613 | F1: 0.4497 | Time: 0:00:39
+[2026-11-13 15:32:49] [INFO] Processed 117462 tokens with 12672 gold phrases; Found: 13448 phrases; Correct: 5834.
+[2026-11-13 15:32:49] [INFO] Accuracy (excl. 'O'): 0.9342
+[2026-11-13 15:32:49] [INFO] Token Accuracy: 0.9871 | Strict Precision: 0.4338 | Strict Recall: 0.4604 | Strict F1: 0.4467
+[2026-11-13 15:32:49] [INFO]                CQ: Precision: 0.4552; Recall: 0.4759; F1-score: 0.4653 (Gold: 4104, Pred: 4290)
+[2026-11-13 15:32:49] [INFO]                NG: Precision: 0.4976; Recall: 0.4976; F1-score: 0.4976 (Gold: 2456, Pred: 2456)
+[2026-11-13 15:32:49] [INFO]                SL: Precision: 0.4802; Recall: 0.4874; F1-score: 0.4838 (Gold: 398, Pred: 404)
+[2026-11-13 15:32:49] [INFO]              VBPL: Precision: 0.3683; Recall: 0.4646; F1-score: 0.4109 (Gold: 1186, Pred: 1496)
+[2026-11-13 15:32:49] [INFO]                ĐT: Precision: 0.3986; Recall: 0.4227; F1-score: 0.4103 (Gold: 4528, Pred: 4802)
+[2026-11-13 15:32:49] [INFO] 
+              precision    recall  f1-score   support
+
+           O     0.9929    0.9930    0.9929    105726
+        B-CQ     0.9570    0.9654    0.9612      2052
+        I-CQ     0.8585    0.8882    0.8731       608
+        B-ĐT     0.9390    0.9254    0.9321      2264
+        I-ĐT     0.8528    0.7257    0.7841      1389
+      B-VBPL     0.8613    0.9528    0.9047       593
+      I-VBPL     0.9181    0.9794    0.9478      1946
+        B-NG     0.9984    0.9967    0.9976      1228
+        I-NG     0.9992    0.9967    0.9980      1227
+        B-SL     0.9949    0.9849    0.9899       199
+        I-SL     0.9784    0.9826    0.9805       230
+
+    accuracy                         0.9871    117462
+   macro avg     0.9409    0.9446    0.9420    117462
+weighted avg     0.9871    0.9871    0.9870    117462
+
+[2026-11-13 15:32:50] [INFO] Entity Strict method: nervaluate==1.2.1 (EvaluationResult attributes)
+[2026-11-13 15:32:51] [INFO] Test Strict P=0.4338 R=0.4604 F1=0.4467

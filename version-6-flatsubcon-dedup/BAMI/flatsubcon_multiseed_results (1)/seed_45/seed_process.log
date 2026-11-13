@@ -1,0 +1,65 @@
+[2026-11-13 14:36:57] [INFO] Stage 1 seed=45, model=Qualcomm-AI-Research/BamiBERT, effective_batch=64, micro=64, accum=1, device=cuda
+[2026-11-13 14:38:41] [INFO] [STAGE 1 - Epoch 01/15] Train Loss: 3.4530 | Dev Loss: 2.7872 | Time: 0:01:30
+[2026-11-13 14:40:12] [INFO] [STAGE 1 - Epoch 02/15] Train Loss: 3.0012 | Dev Loss: 2.7659 | Time: 0:01:30
+[2026-11-13 14:41:43] [INFO] [STAGE 1 - Epoch 03/15] Train Loss: 2.9675 | Dev Loss: 2.7609 | Time: 0:01:30
+[2026-11-13 14:43:15] [INFO] [STAGE 1 - Epoch 04/15] Train Loss: 2.9422 | Dev Loss: 2.7544 | Time: 0:01:30
+[2026-11-13 14:44:46] [INFO] [STAGE 1 - Epoch 05/15] Train Loss: 2.9288 | Dev Loss: 2.7611 | Time: 0:01:30
+[2026-11-13 14:46:16] [INFO] [STAGE 1 - Epoch 06/15] Train Loss: 2.9260 | Dev Loss: 2.7517 | Time: 0:01:30
+[2026-11-13 14:47:47] [INFO] [STAGE 1 - Epoch 07/15] Train Loss: 2.9219 | Dev Loss: 2.7489 | Time: 0:01:30
+[2026-11-13 14:49:18] [INFO] [STAGE 1 - Epoch 08/15] Train Loss: 2.9124 | Dev Loss: 2.7591 | Time: 0:01:30
+[2026-11-13 14:50:49] [INFO] [STAGE 1 - Epoch 09/15] Train Loss: 2.9160 | Dev Loss: 2.7492 | Time: 0:01:30
+[2026-11-13 14:52:19] [INFO] [STAGE 1 - Epoch 10/15] Train Loss: 2.9088 | Dev Loss: 2.7540 | Time: 0:01:30
+[2026-11-13 14:53:49] [INFO] [STAGE 1 - Epoch 11/15] Train Loss: 2.9088 | Dev Loss: 2.7543 | Time: 0:01:30
+[2026-11-13 14:55:19] [INFO] [STAGE 1 - Epoch 12/15] Train Loss: 2.9095 | Dev Loss: 2.7529 | Time: 0:01:30
+[2026-11-13 14:55:19] [INFO] Stage 1 early stopping at epoch 12.
+[2026-11-13 14:55:20] [INFO] Stage 2 seed=45, model=Qualcomm-AI-Research/BamiBERT, effective_batch=64, micro=64, accum=1, device=cuda
+[2026-11-13 14:56:18] [INFO] [STAGE 2 - Epoch 01/20] Train Loss: 0.1921 | Dev Strict P: 0.3774 | R: 0.4041 | F1: 0.3903 | Time: 0:00:42
+[2026-11-13 14:57:01] [INFO] [STAGE 2 - Epoch 02/20] Train Loss: 0.0710 | Dev Strict P: 0.3837 | R: 0.4184 | F1: 0.4003 | Time: 0:00:42
+[2026-11-13 14:57:44] [INFO] [STAGE 2 - Epoch 03/20] Train Loss: 0.0621 | Dev Strict P: 0.3894 | R: 0.4249 | F1: 0.4064 | Time: 0:00:42
+[2026-11-13 14:58:28] [INFO] [STAGE 2 - Epoch 04/20] Train Loss: 0.0577 | Dev Strict P: 0.3885 | R: 0.4365 | F1: 0.4111 | Time: 0:00:42
+[2026-11-13 14:59:11] [INFO] [STAGE 2 - Epoch 05/20] Train Loss: 0.0546 | Dev Strict P: 0.3951 | R: 0.4375 | F1: 0.4152 | Time: 0:00:42
+[2026-11-13 14:59:55] [INFO] [STAGE 2 - Epoch 06/20] Train Loss: 0.0522 | Dev Strict P: 0.3997 | R: 0.4379 | F1: 0.4179 | Time: 0:00:42
+[2026-11-13 15:00:40] [INFO] [STAGE 2 - Epoch 07/20] Train Loss: 0.0505 | Dev Strict P: 0.4072 | R: 0.4383 | F1: 0.4222 | Time: 0:00:43
+[2026-11-13 15:01:24] [INFO] [STAGE 2 - Epoch 08/20] Train Loss: 0.0489 | Dev Strict P: 0.4044 | R: 0.4397 | F1: 0.4213 | Time: 0:00:42
+[2026-11-13 15:02:06] [INFO] [STAGE 2 - Epoch 09/20] Train Loss: 0.0479 | Dev Strict P: 0.4101 | R: 0.4401 | F1: 0.4246 | Time: 0:00:42
+[2026-11-13 15:02:50] [INFO] [STAGE 2 - Epoch 10/20] Train Loss: 0.0468 | Dev Strict P: 0.4109 | R: 0.4413 | F1: 0.4256 | Time: 0:00:42
+[2026-11-13 15:03:34] [INFO] [STAGE 2 - Epoch 11/20] Train Loss: 0.0459 | Dev Strict P: 0.4098 | R: 0.4456 | F1: 0.4269 | Time: 0:00:42
+[2026-11-13 15:04:18] [INFO] [STAGE 2 - Epoch 12/20] Train Loss: 0.0451 | Dev Strict P: 0.4101 | R: 0.4503 | F1: 0.4293 | Time: 0:00:42
+[2026-11-13 15:05:02] [INFO] [STAGE 2 - Epoch 13/20] Train Loss: 0.0445 | Dev Strict P: 0.4127 | R: 0.4483 | F1: 0.4298 | Time: 0:00:42
+[2026-11-13 15:05:46] [INFO] [STAGE 2 - Epoch 14/20] Train Loss: 0.0438 | Dev Strict P: 0.4160 | R: 0.4483 | F1: 0.4315 | Time: 0:00:42
+[2026-11-13 15:06:29] [INFO] [STAGE 2 - Epoch 15/20] Train Loss: 0.0433 | Dev Strict P: 0.4158 | R: 0.4483 | F1: 0.4314 | Time: 0:00:42
+[2026-11-13 15:07:12] [INFO] [STAGE 2 - Epoch 16/20] Train Loss: 0.0429 | Dev Strict P: 0.4183 | R: 0.4489 | F1: 0.4331 | Time: 0:00:42
+[2026-11-13 15:07:56] [INFO] [STAGE 2 - Epoch 17/20] Train Loss: 0.0428 | Dev Strict P: 0.4197 | R: 0.4496 | F1: 0.4341 | Time: 0:00:42
+[2026-11-13 15:08:40] [INFO] [STAGE 2 - Epoch 18/20] Train Loss: 0.0423 | Dev Strict P: 0.4163 | R: 0.4517 | F1: 0.4333 | Time: 0:00:42
+[2026-11-13 15:09:23] [INFO] [STAGE 2 - Epoch 19/20] Train Loss: 0.0419 | Dev Strict P: 0.4175 | R: 0.4532 | F1: 0.4346 | Time: 0:00:42
+[2026-11-13 15:10:07] [INFO] [STAGE 2 - Epoch 20/20] Train Loss: 0.0415 | Dev Strict P: 0.4176 | R: 0.4491 | F1: 0.4328 | Time: 0:00:42
+[2026-11-13 15:10:24] [INFO] Processed 117462 tokens with 12672 gold phrases; Found: 13818 phrases; Correct: 5735.
+[2026-11-13 15:10:24] [INFO] Accuracy (excl. 'O'): 0.9215
+[2026-11-13 15:10:24] [INFO] Token Accuracy: 0.9845 | Strict Precision: 0.4150 | Strict Recall: 0.4526 | Strict F1: 0.4330
+[2026-11-13 15:10:24] [INFO]                CQ: Precision: 0.4281; Recall: 0.4700; F1-score: 0.4481 (Gold: 4104, Pred: 4506)
+[2026-11-13 15:10:24] [INFO]                NG: Precision: 0.4939; Recall: 0.4967; F1-score: 0.4953 (Gold: 2456, Pred: 2470)
+[2026-11-13 15:10:24] [INFO]                SL: Precision: 0.4757; Recall: 0.4925; F1-score: 0.4840 (Gold: 398, Pred: 412)
+[2026-11-13 15:10:24] [INFO]              VBPL: Precision: 0.3970; Recall: 0.4486; F1-score: 0.4212 (Gold: 1186, Pred: 1340)
+[2026-11-13 15:10:24] [INFO]                ĐT: Precision: 0.3650; Recall: 0.4103; F1-score: 0.3864 (Gold: 4528, Pred: 5090)
+[2026-11-13 15:10:24] [INFO] 
+              precision    recall  f1-score   support
+
+           O     0.9915    0.9915    0.9915    105726
+        B-CQ     0.9070    0.9605    0.9330      2052
+        I-CQ     0.8363    0.8487    0.8424       608
+        B-ĐT     0.8793    0.9298    0.9038      2264
+        I-ĐT     0.8472    0.6825    0.7560      1389
+      B-VBPL     0.9285    0.9410    0.9347       593
+      I-VBPL     0.9564    0.9476    0.9520      1946
+        B-NG     0.9951    0.9951    0.9951      1228
+        I-NG     0.9951    0.9976    0.9963      1227
+        B-SL     0.9802    0.9950    0.9875       199
+        I-SL     0.9703    0.9957    0.9828       230
+
+    accuracy                         0.9845    117462
+   macro avg     0.9352    0.9350    0.9341    117462
+weighted avg     0.9844    0.9845    0.9843    117462
+
+[2026-11-13 15:10:27] [INFO] Entity Strict method: nervaluate==1.2.1 (EvaluationResult attributes)
+[2026-11-13 15:10:28] [INFO] Test Strict P=0.4150 R=0.4526 F1=0.4330
+Completed seed=45 with micro=64, accum=1

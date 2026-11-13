@@ -1,0 +1,2 @@
+﻿Phiên bản,Model,CQ - P (%),CQ - R (%),VBPL - P (%),VBPL - R (%),VBPL - F1 (%),NG - P (%),NG - R (%),NG - F1 (%),SL - P (%),SL - R (%),SL - F1 (%),Overall - P (%),Overall - R (%),Overall - F1 (%),Ghi chú
+phobert_base,vinai/phobert-base,92.51,93.96,77.22,92.58,84.2,99.67,99.59,99.63,94.15,96.98,95.54,87.41,92.01,89.65,Seed 45

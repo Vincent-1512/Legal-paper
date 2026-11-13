@@ -1,0 +1,98 @@
+{
+  "seed": 43,
+  "stage1": [
+    {
+      "epoch": 1,
+      "train_loss": 3.455012141867721,
+      "val_loss": 2.787323463110276,
+      "duration_seconds": 90.59948325157166
+    },
+    {
+      "epoch": 2,
+      "train_loss": 2.999102652547214,
+      "val_loss": 2.764179259170721,
+      "duration_seconds": 90.30244326591492
+    },
+    {
+      "epoch": 3,
+      "train_loss": 2.9578710538322794,
+      "val_loss": 2.7519257186371604,
+      "duration_seconds": 90.25134897232056
+    },
+    {
+      "epoch": 4,
+      "train_loss": 2.9390957181586512,
+      "val_loss": 2.7606739732954235,
+      "duration_seconds": 90.22545051574707
+    },
+    {
+      "epoch": 5,
+      "train_loss": 2.9275324208666853,
+      "val_loss": 2.755571332978614,
+      "duration_seconds": 90.19486618041992
+    },
+    {
+      "epoch": 6,
+      "train_loss": 2.9259469977108172,
+      "val_loss": 2.751778655582004,
+      "duration_seconds": 90.15102553367615
+    },
+    {
+      "epoch": 7,
+      "train_loss": 2.9167308718835643,
+      "val_loss": 2.7579431533813477,
+      "duration_seconds": 90.09859943389893
+    },
+    {
+      "epoch": 8,
+      "train_loss": 2.917591065247432,
+      "val_loss": 2.7601814799838595,
+      "duration_seconds": 90.14488196372986
+    },
+    {
+      "epoch": 9,
+      "train_loss": 2.907150308396519,
+      "val_loss": 2.7614621497966625,
+      "duration_seconds": 90.17058944702148
+    },
+    {
+      "epoch": 10,
+      "train_loss": 2.905445357532653,
+      "val_loss": 2.7462038581753956,
+      "duration_seconds": 90.17247414588928
+    },
+    {
+      "epoch": 11,
+      "train_loss": 2.9140521354321143,
+      "val_loss": 2.757287140245791,
+      "duration_seconds": 90.0159740447998
+    },
+    {
+      "epoch": 12,
+      "train_loss": 2.9143089837041396,
+      "val_loss": 2.7590270425066534,
+      "duration_seconds": 89.99197435379028
+    },
+    {
+      "epoch": 13,
+      "train_loss": 2.9074726822521706,
+      "val_loss": 2.757284626548673,
+      "duration_seconds": 90.08210253715515
+    },
+    {
+      "epoch": 14,
+      "train_loss": 2.9076415607088126,
+      "val_loss": 2.761596570780248,
+      "duration_seconds": 90.17393279075623
+    },
+    {
+      "epoch": 15,
+      "train_loss": 2.904101378089237,
+      "val_loss": 2.7614937270129167,
+      "duration_seconds": 90.07655167579651
+    }
+  ],
+  "best_epoch": 10,
+  "epochs_run": 15,
+  "total_duration_seconds": 1357.5469698905945
+}

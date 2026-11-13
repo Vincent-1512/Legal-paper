@@ -1,0 +1,7 @@
+﻿Phiên bản,Model,Accuracy không tính O (%),BIO Accuracy (%),BIO Macro Recall (%),BIO Macro-F1 (%),BIO Weighted Precision (%),BIO Weighted Recall (%),BIO Weighted-F1 (%),Ghi chú
+phobert_base,vinai/phobert-base,94.5,98.83,95.07,94.86,98.83,98.83,98.83,Seed 42
+phobert_base,vinai/phobert-base,93.89,98.84,94.45,94.77,98.83,98.84,98.83,Seed 43
+phobert_base,vinai/phobert-base,93.85,98.83,94.76,94.86,98.82,98.83,98.82,Seed 44
+phobert_base,vinai/phobert-base,93.69,98.83,94.52,94.8,98.82,98.83,98.82,Seed 45
+phobert_base,vinai/phobert-base,93.42,98.71,94.46,94.2,98.71,98.71,98.7,Seed 46
+phobert_base,vinai/phobert-base,93.87 ± 0.40,98.81 ± 0.05,94.65 ± 0.27,94.70 ± 0.28,98.80 ± 0.05,98.81 ± 0.05,98.80 ± 0.06,Mean ± Std

@@ -1,0 +1,19 @@
+{
+  "dataset_repo": "levandai1704/PAP_NER_dedup_70_15_15",
+  "dataset_revision": "e4af303d22f878e5827c94861f50f747a6b3ed45",
+  "metrics": {
+    "loss_per_sentence": 0.7934404293295924,
+    "bio_accuracy": 0.9970288263438388,
+    "bio_macro_f1": 0.9837225828458321,
+    "entity_strict_precision_micro": 0.9815104982764024,
+    "entity_strict_recall_micro": 0.9886363636363636,
+    "entity_strict_micro_f1": 0.9850605441107092,
+    "entity_strict_macro_f1": 0.9852757846593733
+  },
+  "dataset": {
+    "truncated_sentences": 0,
+    "discarded_words": 0,
+    "sha256": "efdc66408ba71099549e301842844556d783b9eaff131c202666d5bd1c2a008d",
+    "limit": null
+  }
+}

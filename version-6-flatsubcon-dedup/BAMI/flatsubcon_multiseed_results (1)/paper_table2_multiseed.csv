@@ -1,0 +1,7 @@
+﻿Phiên bản,Model,CQ - P (%),CQ - R (%),VBPL - P (%),VBPL - R (%),VBPL - F1 (%),NG - P (%),NG - R (%),NG - F1 (%),SL - P (%),SL - R (%),SL - F1 (%),Overall - P (%),Overall - R (%),Overall - F1 (%),Ghi chú
+bamibert,Qualcomm-AI-Research/BamiBERT,86.86,94.69,78.88,90.05,84.09,98.95,99.35,99.15,95.07,96.98,96.02,84.65,90.4,87.43,Seed 42
+bamibert,Qualcomm-AI-Research/BamiBERT,85.89,94.05,79.08,89.88,84.14,98.86,98.78,98.82,93.17,95.98,94.55,83.76,90.1,86.82,Seed 43
+bamibert,Qualcomm-AI-Research/BamiBERT,86.22,92.4,79.73,88.87,84.05,98.86,99.1,98.98,95.07,96.98,96.02,84.17,89.38,86.7,Seed 44
+bamibert,Qualcomm-AI-Research/BamiBERT,85.62,94.01,79.4,89.71,84.24,98.79,99.35,99.07,95.15,98.49,96.79,83.01,90.51,86.6,Seed 45
+bamibert,Qualcomm-AI-Research/BamiBERT,85.4,91.76,80.63,91.23,85.6,99.35,99.27,99.31,95.1,97.49,96.28,83.57,89.46,86.42,Seed 46
+bamibert,Qualcomm-AI-Research/BamiBERT,86.00 ± 0.57,93.38 ± 1.24,79.54 ± 0.69,89.95 ± 0.85,84.42 ± 0.66,98.96 ± 0.22,99.17 ± 0.24,99.07 ± 0.18,94.71 ± 0.86,97.18 ± 0.91,95.93 ± 0.83,83.83 ± 0.62,89.97 ± 0.52,86.79 ± 0.38,Mean ± Std

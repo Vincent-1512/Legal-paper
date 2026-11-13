@@ -1,0 +1,30 @@
+CoNLL evaluation (legacy flattened-token behavior):
+Processed 117462 tokens with 12672 gold phrases; Found: 13312 phrases; Correct: 5852.
+Accuracy (excl. 'O'): 0.9385
+Token Accuracy: 0.9883 | Strict Precision: 0.4396 | Strict Recall: 0.4618 | Strict F1: 0.4504
+               CQ: Precision: 0.4590; Recall: 0.4795; F1-score: 0.4690 (Gold: 4104, Pred: 4288)
+               NG: Precision: 0.4988; Recall: 0.4980; F1-score: 0.4984 (Gold: 2456, Pred: 2452)
+               SL: Precision: 0.4802; Recall: 0.4874; F1-score: 0.4838 (Gold: 398, Pred: 404)
+             VBPL: Precision: 0.3937; Recall: 0.4621; F1-score: 0.4251 (Gold: 1186, Pred: 1392)
+               ĐT: Precision: 0.4018; Recall: 0.4238; F1-score: 0.4125 (Gold: 4528, Pred: 4776)
+
+Classification report (BIO token level):
+              precision    recall  f1-score   support
+
+           O     0.9933    0.9939    0.9936    105726
+        B-CQ     0.9524    0.9756    0.9639      2052
+        I-CQ     0.8911    0.8750    0.8830       608
+        B-ĐT     0.9378    0.9262    0.9320      2264
+        I-ĐT     0.8653    0.7538    0.8057      1389
+      B-VBPL     0.9161    0.9578    0.9365       593
+      I-VBPL     0.9354    0.9748    0.9547      1946
+        B-NG     0.9992    0.9967    0.9980      1228
+        I-NG     1.0000    0.9976    0.9988      1227
+        B-SL     0.9899    0.9849    0.9874       199
+        I-SL     0.9742    0.9870    0.9806       230
+
+    accuracy                         0.9883    117462
+   macro avg     0.9504    0.9476    0.9486    117462
+weighted avg     0.9882    0.9883    0.9882    117462
+
+Entity strict method: nervaluate==1.2.1 (EvaluationResult attributes)

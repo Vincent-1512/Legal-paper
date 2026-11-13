@@ -1,0 +1,61 @@
+Bạn đang làm việc trên Google Sheet kết quả baseline NER của mình. Bảng 1 hiện có các cột: Phiên bản | Model | Accuracy không tính O | BIO Accuracy | BIO Macro Recall | BIO Macro-F1 | BIO Weighted Precision | BIO Weighted Recall | BIO Weighted-F1 | Ghi chú.
+
+Mình cần BỔ SUNG 7 cột mới vào CUỐI Bảng 1 (sau cột Ghi chú, hoặc ngay sau BIO Weighted-F1 nếu bạn thấy hợp lý hơn; hỏi mình nếu phân vân), theo thứ tự:
+1. BIO Macro Precision (%)  (mức token, để đủ bộ Macro P/R/F1 cùng với Macro Recall và Macro-F1 đã có)
+2. Entity Micro P (%)
+3. Entity Micro R (%)
+4. Entity Micro F1 (%)
+5. Entity Macro P (%)
+6. Entity Macro R (%)
+7. Entity Macro F1 (%)
+Các cột Entity là Strict, mức cả cụm thực thể, trung bình trên 5 loại thực thể (CQ, ĐT, VBPL, NG, SL). Micro gộp mọi thực thể rồi tính một lần; Macro là trung bình đều giữa 5 loại. Ghi chú: ở mức token, Micro P/R/F1 đều bằng BIO Accuracy đã có sẵn nên không thêm cột riêng.
+
+QUY TẮC
+- Không sửa bất kỳ ô cũ nào. Chỉ thêm cột mới và điền giá trị.
+- Khớp dòng theo SỐ DÒNG TRÊN SHEET ghi ở đầu mỗi dòng dữ liệu bên dưới (Dòng 6, Dòng 7...). Đối chiếu thêm cột Phiên bản và Model để chắc đúng dòng; nếu lệch thì hỏi mình, đừng đoán.
+- Các dòng ghi "CHƯA CÓ FILE" thì để trống ô và tô màu vàng nhạt để mình biết còn thiếu.
+- Ô ghi "N/A" nghĩa là chưa có số liệu, giữ nguyên chữ "N/A" trong ô (riêng dòng 9 chỉ có Macro F1, không có Macro P và Macro R).
+- Dòng 4 (CRF + data gốc, PhoBERT-base) và các dòng tiêu đề nhóm thì ghi N/A cho cả 7 cột mới.
+- Định dạng giống các ô cũ: phần trăm, 2 chữ số thập phân. Với Flat SupCon, dòng Mean ± Std giữ nguyên dạng "x ± y".
+- Với phiên bản Flat SupCon + Linear Probe, tìm đúng dòng theo Model và cột Ghi chú (Seed 42..46, Mean ± Std). Chỉ PhoBERT và BamiBERT đã có dữ liệu; XLM-R và ELECTRA để trống vì chưa chạy.
+
+DỮ LIỆU (thứ tự 7 giá trị: BIO Macro Precision | Entity Micro P | Entity Micro R | Entity Micro F1 | Entity Macro P | Entity Macro R | Entity Macro F1)
+Dòng 6 | CRF + datadedup | PhoBERT-base :: 98.12 | 98.52 | 98.97 | 98.75 | 97.96 | 98.79 | 98.37
+Dòng 7 | CRF + datadedup | BamiBERT :: 98.20 | 98.20 | 98.77 | 98.48 | 97.95 | 98.39 | 98.17
+Dòng 8 | CRF + datadedup | XLM-R :: 98.06 | 98.38 | 98.85 | 98.61 | 97.91 | 98.83 | 98.37
+Dòng 9 | CRF + datadedup | ELECTRA :: 97.16 | 98.04 | 98.85 | 98.44 | N/A | N/A | 98.29
+Dòng 11 | CRF + HSupCon + datadedup | PhoBERT-base :: CHƯA CÓ FILE | CHƯA CÓ FILE | CHƯA CÓ FILE | CHƯA CÓ FILE | CHƯA CÓ FILE | CHƯA CÓ FILE | CHƯA CÓ FILE
+Dòng 12 | CRF + HSupCon + datadedup | λ=0.5 phobert :: 97.72 | 97.90 | 98.82 | 98.36 | 97.28 | 98.73 | 98.00
+Dòng 13 | CRF + HSupCon + datadedup | λ=0.7 phobert :: 97.96 | 98.30 | 98.75 | 98.53 | 97.56 | 98.70 | 98.12
+Dòng 14 | CRF + HSupCon + datadedup | BamiBERT :: CHƯA CÓ FILE | CHƯA CÓ FILE | CHƯA CÓ FILE | CHƯA CÓ FILE | CHƯA CÓ FILE | CHƯA CÓ FILE | CHƯA CÓ FILE
+Dòng 15 | CRF + HSupCon + datadedup | λ=0.5 bamibert :: 98.22 | 98.09 | 98.88 | 98.48 | 97.89 | 98.99 | 98.43
+Dòng 16 | CRF + HSupCon + datadedup | λ=0.7 bamibert :: 98.12 | 98.24 | 98.86 | 98.55 | 97.91 | 98.91 | 98.40
+Dòng 17 | CRF + HSupCon + datadedup | XLM-R :: 98.28 | 98.40 | 99.02 | 98.71 | 98.10 | 99.00 | 98.55
+Dòng 18 | CRF+HSupCon(α=0.5) + datadedup | XLM-R :: 97.53 | 97.64 | 98.61 | 98.12 | 96.84 | 98.55 | 97.68
+Dòng 19 | CRF+HSupCon(α=0.7) + datadedup | XLM-R :: 97.72 | 97.46 | 98.72 | 98.09 | 96.62 | 98.28 | 97.44
+Dòng 20 | CRF + HSupCon + datadedup | ELECTRA :: CHƯA CÓ FILE | CHƯA CÓ FILE | CHƯA CÓ FILE | CHƯA CÓ FILE | CHƯA CÓ FILE | CHƯA CÓ FILE | CHƯA CÓ FILE
+Dòng 21 | CRF + HSupCon + datadedup | ELECTRA CRF+HSupCon α=0.5 :: 97.29 | 97.45 | 98.77 | 98.10 | 97.12 | 98.78 | 97.94
+Dòng 22 | CRF + HSupCon + datadedup | ELECTRA CRF+HSupCon α=0.7 :: 97.45 | 96.87 | 98.63 | 97.74 | 97.12 | 98.74 | 97.92
+Dòng 23 | CRF + HSupCon + datadedup | λ=0.5 electra :: 97.70 | 97.66 | 98.75 | 98.20 | 97.54 | 98.80 | 98.17
+Dòng 24 | CRF + HSupCon + datadedup | λ=0.7 electra :: 97.31 | 96.87 | 98.63 | 97.74 | 96.97 | 98.71 | 97.83
+Dòng 26 | Softmax + datadedup | PhoBERT :: 97.14 | 97.66 | 98.75 | 98.20 | 96.68 | 98.70 | 97.67
+Dòng 27 | Softmax + datadedup | BamiBERT :: 97.69 | 97.48 | 98.83 | 98.15 | 96.92 | 98.57 | 97.74
+Dòng 28 | Softmax + datadedup | XLM-R :: 97.74 | 97.94 | 98.91 | 98.42 | 97.56 | 98.89 | 98.22
+Dòng 29 | Softmax + datadedup | ELECTRA :: 97.43 | 97.66 | 98.86 | 98.26 | 97.40 | 98.96 | 98.17
+Flat SupCon + Linear Probe | PhoBERT | Seed 42 :: 94.66 | 87.37 | 92.83 | 90.02 | 89.02 | 94.10 | 91.42
+Flat SupCon + Linear Probe | PhoBERT | Seed 43 :: 95.14 | 87.54 | 92.49 | 89.95 | 88.95 | 93.92 | 91.31
+Flat SupCon + Linear Probe | PhoBERT | Seed 44 :: 95.04 | 87.92 | 92.36 | 90.09 | 89.34 | 94.03 | 91.55
+Flat SupCon + Linear Probe | PhoBERT | Seed 45 :: 95.17 | 87.41 | 92.01 | 89.65 | 88.57 | 93.73 | 90.98
+Flat SupCon + Linear Probe | PhoBERT | Seed 46 :: 94.09 | 86.76 | 92.08 | 89.34 | 88.00 | 93.93 | 90.71
+Flat SupCon + Linear Probe | PhoBERT | Mean ± Std :: 94.82 ± 0.46 | 87.40 ± 0.42 | 92.35 ± 0.33 | 89.81 ± 0.31 | 88.77 ± 0.51 | 93.94 ± 0.14 | 91.20 ± 0.34
+Flat SupCon + Linear Probe | BamiBERT | Seed 42 :: 93.93 | 84.65 | 90.40 | 87.43 | 87.16 | 92.45 | 89.68
+Flat SupCon + Linear Probe | BamiBERT | Seed 43 :: 94.02 | 83.76 | 90.10 | 86.82 | 86.36 | 92.01 | 89.05
+Flat SupCon + Linear Probe | BamiBERT | Seed 44 :: 93.89 | 84.17 | 89.38 | 86.70 | 87.01 | 91.64 | 89.23
+Flat SupCon + Linear Probe | BamiBERT | Seed 45 :: 93.52 | 83.01 | 90.51 | 86.60 | 86.39 | 92.73 | 89.40
+Flat SupCon + Linear Probe | BamiBERT | Seed 46 :: 93.56 | 83.57 | 89.46 | 86.42 | 86.89 | 92.12 | 89.39
+Flat SupCon + Linear Probe | BamiBERT | Mean ± Std :: 93.78 ± 0.23 | 83.83 ± 0.62 | 89.97 ± 0.53 | 86.79 ± 0.39 | 86.76 ± 0.37 | 92.19 ± 0.42 | 89.35 ± 0.23
+
+KIỂM TRA SAU KHI GHI
+1. Dòng 6 (CRF + datadedup PhoBERT-base): Entity Micro F1 phải là 98.75, BIO Macro Precision 98.12.
+2. Flat SupCon PhoBERT Mean ± Std: Entity Micro F1 phải là 89.81 ± 0.31 (trùng Overall F1 của Bảng 2).
+3. Báo mình mọi ô phải đoán, mọi dòng không khớp được, và những dòng để trống.
